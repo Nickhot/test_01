@@ -1,0 +1,70 @@
+2. Write a NumPy program to create a 3x3 matrix with values ranging from 2 to 10.
+
+hint: 
+ * np.arange(start, end)
+ * reshape method
+
+Expected Output:
+[[ 2 3 4]
+[ 5 6 7]
+[ 8 9 10]]
+
+3. Write a NumPy program to create a null vector of size 10 and update sixth value to 11.
+
+import numpy as np
+x = np.zeros(10)
+print(x)
+print("Update sixth value to 11")
+x[6] = 11
+print(x)
+
+Hint np.zeros
+
+4. Write a NumPy program to reverse an array (first element becomes last).
+
+Original array: arange(1,20)
+
+import numpy as np
+x = np.arange(1, 20)
+print("Original array:")
+print(x)
+print("Reverse array:")
+x = x[::-1]
+print(x)
+
+#or (mais bien château branlant)
+
+
+import numpy as np
+x = np.arange(1, 20)
+list(x)
+print(x)
+print("Reverse array:")
+x = x[::-1]
+print(x)
+
+
+Hint : list() and reversed() 
+
+5. Write a NumPy program to create a structured array from given student name, height, class and their data types. Now sort the array on height.
+
+If the data type is structured data type, an aggregate of other data types, (e.g., describing an array item consisting of an integer and a float), what are the names of the “fields” of the structure, by which they can be accessed, what is the data-type of each field, and which part of the memory block each field takes.
+
+Hint:
+   * to create a structured array np.array(x, dtype=data_type_list)
+   
+use the following:
+
+data_type = [('name', 'S15'), ('class', int), ('height', float)]
+students_details = [('James', 5, 48.5), ('Nail', 6, 52.5),('Paul', 5, 42.10), ('Pit', 5, 40.11)]
+
+#5
+
+import numpy as np
+data_type = [('name', 'S15'), ('class', int), ('height', float)]
+students_details = [('James', 5, 48.5), ('Nail', 6, 52.5),('Paul', 5, 42.10), ('Pit', 5, 40.11)]
+students = np.array(students_details, data_type=data_type_list)
+print("Original array:")
+print(students)
+print("Sort by height")
+print(np.sort(students, order='height'))
