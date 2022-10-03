@@ -1,0 +1,76 @@
+
+R version 4.2.1 (2022-06-23) -- "Funny-Looking Kid"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin17.0 (64-bit)
+
+R est un logiciel libre livré sans AUCUNE GARANTIE.
+Vous pouvez le redistribuer sous certaines conditions.
+Tapez 'license()' ou 'licence()' pour plus de détails.
+
+R est un projet collaboratif avec de nombreux contributeurs.
+Tapez 'contributors()' pour plus d'information et
+'citation()' pour la façon de le citer dans les publications.
+
+Tapez 'demo()' pour des démonstrations, 'help()' pour l'aide
+en ligne ou 'help.start()' pour obtenir l'aide au format HTML.
+Tapez 'q()' pour quitter R.
+
+
+Warning message:
+File monitoring failed for project at "~/Desktop/BSB/MSc DSOB/Lentz/Session 3"
+Error 2 (No such file or directory)
+Features disabled: R source file indexing, Diagnostics
+> name <- c("Doe", "Martin")
+> age <- c(56, 22)
+> age <- ae
+Erreur : objet 'ae' introuvable
+> age <- "ae"
+> rm(ae)
+Message d'avis :
+Dans rm(ae) : objet 'ae' introuvable
+> rm("ae")
+Message d'avis :
+Dans rm("ae") : objet 'ae' introuvable
+> age
+[1] "ae"
+> ae <- c(56, 22)
+> age <- ae
+> rm(ae)
+> age
+[1] 56 22
+> name
+[1] "Doe"    "Martin"
+> df_student <- data.frame(name, age)
+> df_student
+    name age
+1    Doe  56
+2 Martin  22
+> gender <- c("M", "F")
+> new_df <- cbind(df_student, gender)
+> new_df
+    name age gender
+1    Doe  56      M
+2 Martin  22      F
+> stu1 <- c("Smith", 45, "F")
+> stu1
+[1] "Smith" "45"    "F"    
+> new_df <- rbind(new_df, stu1)
+> new_df
+    name age gender
+1    Doe  56      M
+2 Martin  22      F
+3  Smith  45      F
+> sum(age)
+[1] 78
+> str(new_df)
+'data.frame':	3 obs. of  3 variables:
+ $ name  : chr  "Doe" "Martin" "Smith"
+ $ age   : chr  "56" "22" "45"
+ $ gender: chr  "M" "F" "F"
+> as.integer(new_df)
+Erreur : l'objet 'list' ne peut être converti automatiquement en un type 'integer'
+> as.integer(new_df$age)
+[1] 56 22 45
+> new_df$age <- as.integer(new_df$age)
+> new_df$age
+[1] 56 22 45
